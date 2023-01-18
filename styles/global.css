@@ -33,3 +33,12 @@ header .logo {
 main {
     padding: 20px;
 }
+
+.cat-container {
+    width: 200px;
+    text-align: center;
+}
+
+.cat-img {
+    width: 500px;
+}
