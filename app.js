@@ -10,32 +10,32 @@ const chasedCountEl = document.getElementById('chased-count');
 
 /* State */
 let chasedCount = 0;
-let cat  = 9
+let cat = 9;
 const mice = [
-{
-name: 'speedy',
-hp: 5,
-},
-{
-name: 'mousy',
-hp: 3
-},
-{
-name: 'tiny'
-hp: 4
-}
+    {
+        name: 'speedy',
+        hp: 5,
+    },
+    {
+        name: 'mousy',
+        hp: 3,
+    },
+    {
+        name: 'tiny',
+        hp: 4,
+    },
 ];
 
 /* Events */
 buttonEl.addEventListener('click', () => {
     const miceName = inputEl.ariaValueMax;
-    if(!miceName) {
+    if (!miceName) {
         return;
     }
 
-    const newMice ={
+    const newMice = {
         name: miceName,
-        lives: Math.ceil(Math.random() * 6)
+        lives: Math.ceil(Math.random() * 6),
     };
 
     mice.push(newMice);
