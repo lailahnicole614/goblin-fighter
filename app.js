@@ -3,8 +3,9 @@ import { renderMice } from './utils.js';
 /* Get DOM Elements */
 const miceEl = document.getElementById('mice');
 const catLivesEl = document.getElementById('cat-lives');
-const catImgEl = document.getElementsById('cat-img');
+const catImgEl = document.getElementById('cat-img');
 const inputEl = document.getElementById('mice-input');
+console.log(inputEl);
 const buttonEl = document.getElementById('mice-button');
 const chasedCountEl = document.getElementById('chased-count');
 
@@ -22,13 +23,14 @@ const mice = [
     },
     {
         name: 'tiny',
-        hp: 4,
+        hp: 2,
     },
 ];
 
 /* Events */
 buttonEl.addEventListener('click', () => {
     const miceName = inputEl.value;
+    console.log(miceName);
     if (!miceName) {
         return;
     }
@@ -48,9 +50,10 @@ function displayMice() {
     miceEl.textContent = '';
     //looping for mice in state=
     for (let mouse of mice) {
-        const newMiceEl = renderMice(mouse);
+        const newMouseEl = renderMice(mouse);
         // event listener
-        newMiceEl.addEventListener('click', () => {
+        newMouseEl.addEventListener('click', () => {
+            chasedCount++;
             if (catLives <= 0) {
                 alert('you are too tired to chase!');
                 return;
@@ -58,26 +61,26 @@ function displayMice() {
 
             // player chases the mice with their cat:
             if (Math.random() > 0.3) {
-                alert('you chased' + mice.name);
-                mice.hp--;
-
-                if (mice.hp === 0) {
-                    chasedCount++;
-                    chasedCountEl.textContent = `You've chased ${chasedCount} mice;`;
-                }
+                alert('you chased' + ' ' + mouse.name);
+                console.log(mouse.name);
+                mouse.hp--;
             } else {
-                alert(mice.name + 'outran you!');
+                alert(mouse.name + 'outran you!');
+                catLives--;
             }
 
+            if (mouse.hp === 0) {
+                chasedCountEl.textContent = `You've chased ${chasedCount} mice;`;
+            }
             if (Math.random() > 0.8) {
-                alert(mice.name + 'outran you and now you are out of breath!');
+                alert(mouse.name + 'outran you and now you are out of breath!');
                 catLives--;
-
-                if (catLives <= 0) {
-                    catImgEl.classList.add('tired');
-                }
             } else {
-                alert(miceName + 'you caught the mouse!');
+                alert(mouse.name + 'you caught the mouse!');
+            }
+
+            if (catLives <= 0) {
+                catImgEl.classList.add('tired');
             }
 
             catLivesEl.textContent = catLives;
@@ -85,7 +88,7 @@ function displayMice() {
             displayMice();
         });
 
-        miceEl.append(newMiceEl);
+        miceEl.append(newMouseEl);
     }
 }
 
