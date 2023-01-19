@@ -43,6 +43,34 @@ main {
     width: 500px;
 }
 
+.speedy {
+    font-size: 1.5rem;
+    background-color: aqua;
+    width: 100px;
+    border: solid 1px pink;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+    height: 50x;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.mousy {
+    font-size: 1.5rem;
+    background-color: aqua;
+    width: 200px;
+    border: solid 1px pink;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+    height: 50x;
+    margin: 10px;
+    cursor: pointer;
+}
+
 .mice:hover {
     background-color: hotpink;
 }

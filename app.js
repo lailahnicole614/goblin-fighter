@@ -54,6 +54,8 @@ function displayMice() {
         // event listener
         newMouseEl.addEventListener('click', () => {
             chasedCount++;
+            chasedCountEl.textContent = `You've chased ${chasedCount} mice;`;
+
             if (catLives <= 0) {
                 alert('you are too tired to chase!');
                 return;
@@ -69,8 +71,6 @@ function displayMice() {
                 catLives--;
                 return;
             }
-
-            chasedCountEl.textContent = `You've chased ${chasedCount} mice;`;
 
             if (Math.random() > 0.8) {
                 alert(mouse.name + ' ' + 'outran you and now you are out of breath!');
