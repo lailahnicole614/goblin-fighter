@@ -65,18 +65,18 @@ function displayMice() {
                 console.log(mouse.name);
                 mouse.hp--;
             } else {
-                alert(mouse.name + 'outran you!');
+                alert(mouse.name + ' ' + 'outran you!');
                 catLives--;
+                return;
             }
 
-            if (mouse.hp === 0) {
-                chasedCountEl.textContent = `You've chased ${chasedCount} mice;`;
-            }
+            chasedCountEl.textContent = `You've chased ${chasedCount} mice;`;
+
             if (Math.random() > 0.8) {
-                alert(mouse.name + 'outran you and now you are out of breath!');
+                alert(mouse.name + ' ' + 'outran you and now you are out of breath!');
                 catLives--;
             } else {
-                alert(mouse.name + 'you caught the mouse!');
+                alert('you caught' + ' ' + mouse.name);
             }
 
             if (catLives <= 0) {
