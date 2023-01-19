@@ -1,5 +1,5 @@
 /* Imports */
-
+import { renderMice } from './utils.js';
 /* Get DOM Elements */
 const miceEl = document.getElementById('mice');
 const catLivesEl = document.getElementById('cat-lives');

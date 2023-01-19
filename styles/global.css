@@ -45,15 +45,25 @@ main {
 
 .mice {
     font-size: 1.5rem;
-    background-color:aqua;
-    display:flex;
+    background-color: aqua;
+    display: flex;
     width: 200px;
     border: solid 1px pink;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     border-radius: 5px;
     padding: 10px;
     height: 50x;
-    margin 10px;
+    margin: 10px;
     cursor: pointer;
+}
+.mice:hover {
+    background-color: hotpink;
+}
+
+.cat-img {
+    transition: transform 2s ease-out;
+}
+.tired {
+    transform: rotate(-45deg);
 }
