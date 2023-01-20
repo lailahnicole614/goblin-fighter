@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Web App</h1>
+        </header>
+        <main>
+            <header id="chased-count">You have chased 0 mice</header>
+            <div class="cat-container">
+                <h2>Your Lives: <span id="cat-lives">9</span></h2>
+                <div>
+                    <img src="./assets/cat.png" class="cat-img" id="cat-img" />
+                </div>
+            </div>
+            <div class="add-mice-container">
+                <input id="mice-input" />
+                <button id="mice-button">Add Mouse</button>
+            </div>
+            <ul class="mice" id="mice">
+                <!-- append mice-->
+                <li class="mouse">
+                    <li class = "Speedy" id="Speedy">
+                    <p>Speedy</p>
+                    <p>🐭</p>
+                    <p>5</p>
+                    </li>
 
-</head>
+                    <li class="Mousy" id="Mousy">
+                    <p>Mousy</p>
+                    <p>🐭</p>
+                    <p>3</p>
+                    </li>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+                    <li class="Tiny" id="Tiny">
+                    <p>Tiny</p>
+                    <p>🐭</p>
+                    <p>2</p>
+                     </li>
+                </li>
+                <li class="mouse"></li>
+                <li class="mouse"></li>
+            </ul>
+        </main>
+    </body>
 </html>
