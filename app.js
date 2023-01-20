@@ -29,8 +29,6 @@ const mice = [
 /* Events */
 buttonEl.addEventListener('click', () => {
     const miceName = inputEl.value;
-    if (miceName) {
-    }
     //New mouse =
     const newMice = {
         name: miceName || Math.ceil(Math.random() * 30),
