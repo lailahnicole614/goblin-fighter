@@ -11,6 +11,7 @@ export function renderMice(dataMice) {
         emojiEl.textContent = '🐭';
     } else {
         emojiEl.textContent = '☠️';
+        newMiceEl.classList.add('hide');
     }
 
     newMiceEl.classList.add('mouse');

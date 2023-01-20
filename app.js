@@ -62,11 +62,11 @@ function displayMice() {
             if (Math.random() > 0.3) {
                 alert('you chased' + ' ' + mouse.name);
                 mouse.hp--;
-            } else {
-                alert(mouse.name + ' ' + 'outran you!');
-                catLives--;
-                return;
             }
+            // } else {
+            //     alert(mouse.name + ' ' + 'outran you!');
+            //     catLives--;
+            // }
 
             if (Math.random() > 0.8) {
                 alert(mouse.name + ' ' + 'outran you and now you are out of breath!');
