@@ -59,7 +59,7 @@ function displayMice() {
             }
 
             // player chases the mice with their cat:
-            if (Math.random() > 0.3) {
+            if (Math.random() > 0.4) {
                 alert('you chased' + ' ' + mouse.name);
                 mouse.hp--;
             }
@@ -68,11 +68,12 @@ function displayMice() {
             //     catLives--;
             // }
 
-            if (Math.random() > 0.8) {
+            if (Math.random() > 0.7) {
                 alert(mouse.name + ' ' + 'outran you and now you are out of breath!');
                 catLives--;
             } else {
                 alert('you caught' + ' ' + mouse.name);
+                mouse.hp--;
             }
 
             if (catLives <= 0) {
