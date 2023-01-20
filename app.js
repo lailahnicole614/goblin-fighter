@@ -5,7 +5,6 @@ const miceEl = document.getElementById('mice');
 const catLivesEl = document.getElementById('cat-lives');
 const catImgEl = document.getElementById('cat-img');
 const inputEl = document.getElementById('mice-input');
-console.log(inputEl);
 const buttonEl = document.getElementById('mice-button');
 const chasedCountEl = document.getElementById('chased-count');
 
@@ -30,13 +29,11 @@ const mice = [
 /* Events */
 buttonEl.addEventListener('click', () => {
     const miceName = inputEl.value;
-    console.log(miceName);
-    if (!miceName) {
-        return;
+    if (miceName) {
     }
     //New mouse =
     const newMice = {
-        name: miceName,
+        name: miceName || Math.ceil(Math.random() * 30),
         hp: Math.ceil(Math.random() * 6),
     };
     //Moving mouse into state:
@@ -64,7 +61,6 @@ function displayMice() {
             // player chases the mice with their cat:
             if (Math.random() > 0.3) {
                 alert('you chased' + ' ' + mouse.name);
-                console.log(mouse.name);
                 mouse.hp--;
             } else {
                 alert(mouse.name + ' ' + 'outran you!');
